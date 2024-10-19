@@ -63,12 +63,12 @@ def print_red_centered_art():
     os.system("clear")
     art = '''
      
-|:::::::::::|                                            
- ———— ::————/    ___   ____    ____   ___   ____          
-    | ;:\ ::    / ::|/:::::\  /:::::\ | ::: | ::          
-    | :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  
-    | ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  
-     \__   \__/\__   \_____/  \_____/ |___   ___       
+   :::::::::::                                          
+   ———— ::———     ___   ____     ____  ___   ____          
+      | ;:\ ::    / :: /:::::\  /:::::\ | ::: | ::          
+      | :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  
+      | ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  
+       \__   \__/\__   \_____/  \_____/ |___   ___       
 
 
     '''
@@ -77,11 +77,11 @@ def print_red_centered_art():
     #red_art2 = f"{Fore.RED}{art2}{Style.RESET_ALL}"
     art2 = ''' 
 | ::
-| ::   / ::::    / ::::   | :::::
-| ::  | :: | :: | :: | :: | :: | ::
-| ::  | ::::::/ | ::::::/ | :: | ::
-| ::::| :::::   | :::::   | :: | ::
-\______\_____/   \_____/   \___ \__
+| ::   / ::::    / ::::    / :::: \ | ::;::
+| ::  | :: | :: | :: | :: | :: | :: | :: | ::
+| ::  | ::::::/ | ::::::/ | :: | :: | :: | :;
+| ::::| :::::   | :::::   |  :::::  | :: | ::
+\______\_____/   \_____/   \______/  \__  \__
     ''' 
     red_art2 = f"{Fore.RED}{art2}{Style.RESET_ALL}"
     print(red_art2.center(80))
@@ -91,13 +91,13 @@ if __name__ == "__main__":
 def menu():
    # print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" Fore.WHITE + "Press CTRL + C and press enter to exit!!")
     print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" + Fore.WHITE + "Press CTRL + C and press enter to exit!!")
-    print(Fore.BLUE + Style.BRIGHT + "=====================>>>>>>>>>>>>>>>>")
-    print(Fore.WHITE + Style.BRIGHT + "please select from the following options...")
-    print(Fore.WHITE + Style.BRIGHT + "1. DDos a website.  [1]")
+    print(Fore.WHITE + Style.BRIGHT + "=====================>>>>>>>>>>>>>>>>")
+    print(Fore.RED + Style.BRIGHT + "please select from the following options...")
+    print(Fore.BLUE + Style.BRIGHT + "1. DDos a website.  [1]")
     print(Fore.WHITE + Style.BRIGHT + "2. exit.            [2]")
     print("Enter your options .. [e.g 1,2]") 
     global usr
-    usr = input(Fore.GREEN + Style.BRIGHT + ">>>> " )
+    usr = input(Fore.YELLOW + Style.BRIGHT + ">>>> " )
     if usr == "1":
         ddos()
     elif usr == "2":
