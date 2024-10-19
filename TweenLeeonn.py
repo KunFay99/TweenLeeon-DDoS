@@ -80,7 +80,7 @@ def print_red_centered_art():
        | ::::| :::::   | :::::   |  :::::  | :: | ::
         \_____\_____/   \_____/   \______/ \__  \__
     ''' 
-    red_art2 = f"{Fore.YELOW}{art2}{Style.RESET_ALL}"
+    red_art2 = f"{Fore.YELLOW}{art2}{Style.RESET_ALL}"
     print(red_art2.center(80))
     print(Fore.YELLOW + Style.BRIGHT + "[the developer is not rensponsible for any kind of illegal activity done with this tool, this tool only represents how ddos attacks work and it is made for educational purposes.]")
 if __name__ == "__main__":
