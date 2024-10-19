@@ -89,13 +89,4 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print("\n[BAIT] Attack interrupted. Exiting...")
         sys.exit()
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
+
