@@ -79,9 +79,11 @@ def print_red_centered_art():
        | ::  | ::::::/ | ::::::/ | :: | :: | :: | :;
        | ::::| :::::   | :::::   |  :::::  | :: | ::
         \_____\_____/   \_____/   \______/ \__  \__
-         _________________________________________________
-        [[ B R I G A D E  A T T A C K E R  S N I P E R  ]]
-        [[__________E _______L________T_________E_______]]'''
+   _____________________________________________________
+   [[ B R I G A D E  A T T A C K E R  S N I P E R      ]]
+   [[______E_________L________I______T_______E_________]]
+   '''
+    
     red_art2 = f"{Fore.YELLOW}{art2}{Style.RESET_ALL}"
     print(red_art2.center(80))
     print(Fore.YELLOW + Style.BRIGHT + "[the developer is not rensponsible for any kind of illegal activity done with this tool, this tool only represents how ddos attacks work and it is made for educational purposes.]")
