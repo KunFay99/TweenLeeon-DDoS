@@ -21,7 +21,10 @@ f"{Fore.WHITE}     \__   \__/\__   \_____/  \_____/ |___  \___          \______"
  |———————————————————————————————————————————————————————————————|
  |B R I G A D E  A T T A K E R  S N I P E R  E L I T E *By:Kun99 |
 ]
-    print(banner)
+
+# show header with color
+for line in header_lines:
+    print(line)
 
 # Prompt user for input
 def get_user_input():
