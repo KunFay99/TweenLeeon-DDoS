@@ -69,7 +69,7 @@ def print_red_centered_art():
       | :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  
       | ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  
        \__   \__/\__   \_____/  \_____/ |___   ___   '''    
-    red_art = f"{Fore.RED}{art}{Style.RESET_ALL}"  # Set the text color to red
+    red_art = f"{Fore.YELLOW}{art}{Style.RESET_ALL}"  # Set the text color to red
     print(red_art.center(80))  # Adjust the width (80 characters) to match your terminal size
     #red_art2 = f"{Fore.RED}{art2}{Style.RESET_ALL}"
     art2 = ''' 
