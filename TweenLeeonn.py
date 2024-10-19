@@ -1,10 +1,11 @@
- -*- coding: utf-8 -*-           
-import socket
-import threading
-import os
-import sys
-import time
-import random
+# CHEK IMPORT
+try:
+    import socket
+    import threading
+    import os
+    import sys
+    import time
+    import random
 
 # Clear terminal screen
 os.system('clear')
