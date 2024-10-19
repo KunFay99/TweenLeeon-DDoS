@@ -64,23 +64,23 @@ def print_red_centered_art():
     art = '''
      
    :::::::::::                                          
-   ———— ::———     ___   ____     ____  ___   ____          
+   ———— ::———     ___   ____     ____    ___  ____          
       | ;:\ ::    / :: /:::::\  /:::::\ | ::: | ::          
       | :: \ :: :: :: / :: | ::/ :: | ::| :: :: ::  
-      | ::  \ ::  ::  | :::::/ | :::::/ | :: \ :::  
+      | ::  \ ::  ::  | :::::/ | :::::/ | ::  |:::  
        \__   \__/\__   \_____/  \_____/ |___   ___   '''    
     red_art = f"{Fore.YELLOW}{art}{Style.RESET_ALL}"  # Set the text color to red
     print(red_art.center(80))  # Adjust the width (80 characters) to match your terminal size
     #red_art2 = f"{Fore.RED}{art2}{Style.RESET_ALL}"
     art2 = ''' 
        | ::
-       | ::   / ::::    / ::::    / :::: \ | ::;::
+       | ::   / ::::    / ::::    / ::::\  | ::;::
        | ::  | :: | :: | :: | :: | :: | :: | :: | ::
        | ::  | ::::::/ | ::::::/ | :: | :: | :: | :;
        | ::::| :::::   | :::::   |  :::::  | :: | ::
         \_____\_____/   \_____/   \______/ \__  \__
    _____________________________________________________
-   [[ B R I G A D E  A T T A C K E R  S N I P E R      ]]
+   [[   B R I G A D E  A T T A C K E R  S N I P E R    ]]
    [[______E_________L________I______T_______E_________]]
    '''
     
@@ -92,13 +92,13 @@ if __name__ == "__main__":
 def menu():
    # print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" Fore.WHITE + "Press CTRL + C and press enter to exit!!")
     print(Style.BRIGHT + Fore.YELLOW + "[INFO!]" + Fore.BLUE + "Press CTRL + C and press enter to exit!!")
-    print(Fore.WHITE + Style.BRIGHT + "=====================>>>>>>>>>>>>>>>>")
+    print(Fore.WHITE + Style.BRIGHT + "——————————————————————————————————————————————")
     print(Fore.RED + Style.BRIGHT + "please select from the following options...")
     print(Fore.BLUE + Style.BRIGHT + "1. DDos a website.  [1]")
     print(Fore.WHITE + Style.BRIGHT + "2. exit.            [2]")
     print("Enter your options .. [e.g 1,2]") 
     global usr
-    usr = input(Fore.YELLOW + Style.BRIGHT + ">>>> " )
+    usr = input(Fore.YELLOW + Style.BRIGHT + "0======>> " )
     if usr == "1":
         ddos()
     elif usr == "2":
