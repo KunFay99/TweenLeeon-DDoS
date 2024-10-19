@@ -10,7 +10,7 @@ os.system('clear')
 
 # Function to display banner
 def display_banner():
-    banner = """
+    banner = Colored("""
 :::::::::::|                                              / ::
 ———— ::————/     ___   ____    ____   ___   ____          | ::
     | ;:\ ::    / ::|/:::::\  /:::::\ | ::: | ::          | ::
