@@ -8,7 +8,7 @@ import random
 # Clear terminal screen
 os.system('clear')
 
-# Function to display Header color
+# Function to display Header color using '|_' style
 def display_header():
     header_lines = [
 f"{Fore.RED} /:::::::::::                   ",
