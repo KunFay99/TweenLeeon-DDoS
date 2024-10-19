@@ -7,4 +7,8 @@ With the intention of sending a message that you must respect human rights
 
 # Clone Repository
 
-   - git clone 
+   - git clone https://github.com/KunFay99/TweenLeeon-DDoS.git
+
+   - python setup.py
+
+
