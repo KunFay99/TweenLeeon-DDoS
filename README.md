@@ -9,6 +9,9 @@ With the intention of sending a message that you must respect human rights
 
    - git clone https://github.com/KunFay99/TweenLeeon-DDoS.git
 
+   - cd TweenLeeon-DDoS
+
    - python setup.py
 
+   - python3 TweenLeeonn.py
 
