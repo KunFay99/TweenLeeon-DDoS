@@ -6,7 +6,7 @@ c = input(">>>: ")
 if c == "0":
     os.system("pkg install python")
     os.system("pkg install python3")
-    os.system("python3 -m pip install --upgrade-pip")
+    os.system("pip install slowloris")
     os.system("pip install colorama")
     os.system("pip install tqdm")
    
@@ -14,7 +14,7 @@ if c == "0":
 elif c == "1":
     os.system("pkg install python")
     os.system("pkg install python3")
-    os.system("python3 -m pip install --upgrade-pip")
+    os.system("pip nstall slowloris")
     os.system("pip install colorama")
     os.system("pip install tqdm")
    
