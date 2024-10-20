@@ -86,7 +86,7 @@ def print_red_centered_art():
     
     red_art2 = f"{Fore.YELLOW}{art2}{Style.RESET_ALL}"
     print(red_art2.center(80))
-    print(Fore.YELLOW + Style.BRIGHT + "[the developer is not rensponsible for any kind of illegal activity done with this tool, this tool only represents how ddos attacks work and it is made for educational purposes.]")
+    print(Fore.YELLOW + Style.BRIGHT + "[Khanza's dedication and struggle for PALESTINE]")
 if __name__ == "__main__":
     print_red_centered_art()
 def menu():
